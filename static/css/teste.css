@@ -1,0 +1,3239 @@
+@font-face {
+    font-family: 'Gotham Black';
+    src: url(/Gotham-Black.otf) format(opentype);
+}
+
+@font-face {
+    font-family: 'Gotham Book';
+    src: url(/GothamBook.ttf) format(TrueType);
+}
+
+/* Estilo para a scrollbar */
+::-webkit-scrollbar {
+    width: 17px; /* Largura da scrollbar */
+    height: 17px; /* Altura da scrollbar (para rolagem horizontal) */
+}
+
+/* Estilo para a parte do "track" da scrollbar (onde o slider se move) */
+::-webkit-scrollbar-track {
+    background-color:transparent; /* Cor do fundo da scrollbar */
+    border-radius: 10px; /* Borda arredondada */
+}
+
+/* Estilo para a parte "thumb" da scrollbar (o slider) */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #DAFF7C, #4f843f); /* Gradiente entre verde claro e verde escuro */
+    border-radius: 10px; /* Borda arredondada do slider */
+}
+
+/* Estilo para quando o slider está sendo "hovered" */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #c9ff5f, #4a9f47); /* Gradiente com destaque ao passar o mouse */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    width: 100%;
+}
+
+
+
+.section1_cabecalho{
+    width: 65%;
+    position: fixed;
+    padding: 15px;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.section1_cabecalho_menu{
+    padding: 10px;
+    display: flex;
+    
+}
+
+.section1_cabecalho_menu_logo{
+    margin-top: -10px;
+}
+
+.section1_cabecalho_menu_logo_e_nome{
+    text-decoration: none;
+    font-family: 'Gotham Black';
+}
+
+.section1_cabecalho_menu_logo_e_nome_icone{
+    height: 50px;
+    width: 50px;
+    margin-left: 7px;
+}
+
+.section1_cabecalho_menu_logo_e_nome_nome{
+    color: #DAFF7C;
+    font-size: 1.0rem;
+}
+
+.section1_cabecalho_menu_link{
+    justify-content: space-between;
+    gap: 35px;
+    display: flex;
+    font-size: 1.5rem;
+    margin-left: 45px;
+}
+
+.section1_cabecalho_menu_link_link{
+    text-decoration: none;
+    color: #DAFF7C;
+    margin-top: 10px;
+    font-family: 'Gotham Black';
+}
+
+.section1_cabecalho_menu_link_link:hover{
+    cursor: pointer;
+    color: white;
+    transition: color 0.3 ease;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    margin-left: auto;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #DAFF7C;
+    border-radius: 2px;
+}
+
+main{
+    margin-top: 125px;
+}
+
+.section1_principal{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+.section1_principal_topo_direito {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%; /* Garante que as imagens se ajustem à largura total */
+    height: auto;
+    z-index: 15; /* Para ficar atrás do conteúdo */
+    display: flex;
+    justify-content: flex-end; /* Alinha à direita */
+}
+
+.section1_principal_topo_direito_verde_claro {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1; /* Camada de fundo */
+    height: 530px;
+    width: 840px;
+}
+
+.section1_principal_topo_direito_verde_escuro {
+    position: absolute;
+    margin-top: -50;
+    width: 850px; /* Ajuste conforme necessário */
+    z-index: 2; /* Fica sobre a imagem clara */
+    height: 550px;
+}
+
+.section1_principal_topo_direito_slogan{
+    position: absolute;
+    width: auto;
+    height: 450px;
+    z-index: 3;
+}
+
+.section1_principal_topo_direito_redes{
+    display: flex;  /* Faz os ícones ficarem lado a lado */
+    align-items: center; /* Alinha verticalmente */
+    gap: 10px; /* Adiciona um espaço entre os ícones */
+    position: absolute;
+    margin-top: 60px; /* Ajuste conforme necessário */
+    margin-right: 263px; /* Ajuste conforme necessário */
+    z-index: 5;
+}
+
+.section1_principal_topo_direito_redes_face{
+    z-index: 4;
+    height: 40px;
+}
+
+.section1_principal_topo_direito_redes_instagram{
+    z-index: 4;
+    height: 40px;
+}
+
+.section1_principal_topo_direito_configuracoes{
+    z-index: 5;
+    margin-top: 15px;
+    margin-right: 20px;
+    height: 40px;
+    width: auto;
+}
+
+.section1_principal_decoracao{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 6;
+}
+
+.section1_principal_decoracao_fundo{
+    height: 40px;
+    width: auto;
+}
+
+.section1_principal_decoracao_bolinhas{
+    height: 40px;
+}
+
+.section1_principal_titulo {
+    color: white;
+    margin-top: 80px;
+    margin-right: 80px;
+    font-size: 3rem;
+    font-family: 'Gotham Book';
+    text-align: center;
+}
+
+.section1_principal_titulo_cor{
+    color: #DAFF7C;
+    font-family: 'Gotham Book';
+}
+
+.section1_principal_texto{
+    color: #F4F4F4;
+    margin-top: 80px;
+    margin-left: 80px;
+    font-size: 2rem;
+    width: 39%;
+    font-family: 'Gotham Black';
+}
+
+.section1_principal_oval1{
+    height: 80px;
+    width: 80px;
+    margin-left: 1000px;
+    margin-top: -150px;
+}
+
+.section1_principal_redes{
+    display: flex;
+    margin-top: 120px;
+    margin-left: 130px;
+}
+
+.section1_principal_redes_botoes_whatsapp_preto{
+    height: 50px;
+    width: 180px
+}
+
+.section1_principal_redes_botoes_gmail{
+    height: 50px;
+    width: 180px;
+}
+
+/* .section1_principal_foguete{
+    height: 30px;
+    width: 30px;
+    margin-left: 1500px;
+} */
+
+.section1_principal_oval2{
+    height: 80px;
+    width: 80px;
+    margin-left: 300px;
+}
+
+.section1_principal_imagens{
+    top: 0;
+    left: 0;
+    display: flex;
+    z-index: 15;
+    height: auto;
+}
+
+.section1_principal_imagens_fundo{
+    height: 80px;
+    width: 80px;
+    z-index: 1;
+    margin-left: 55px;
+}
+
+.section1_principal_imagens_bolinhas{
+    height: 100px;
+    width: 100px;
+    z-index: 2;
+    margin-left: -88px;
+    margin-top: -10px;
+}
+
+.section1_principal_botao_fale {
+    height: 40px;
+    color: black;
+    padding: 18px;
+    background-color: #DAFF7C;
+    border-radius: 20px;
+    font-size: 1.7rem;
+    width: 300px; /* Definir um tamanho fixo ajuda na centralização */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto; /* Centraliza horizontalmente */
+    text-decoration: none;
+    font-family: 'Gotham Black';
+}
+
+.section1_principal_botao_fale:hover{
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.section1_principal_icone_whatsapp {
+    position: fixed;  /* Fixa na tela ao rolar a página */
+    bottom: 20px;  /* Distância do fundo */
+    right: 30px;  /* Distância da direita */
+    z-index: 100;  /* Garante que fique acima de outros elementos */
+}
+
+.section1_principal_icone_whatsapp_imagem {
+    height: 70px;  /* Ajuste conforme necessário */
+    width: auto;  /* Mantém proporção da imagem */
+}
+
+@media  (min-width:240px) and (max-width: 368px) {
+
+    .section1_cabecalho{
+        width: 100%;
+        margin-left: 20px;
+        z-index: 10000;
+        position: fixed;
+    }
+
+    .section1_cabecalho_menu {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .section1_cabecalho_menu_logo{
+        margin-top: 0;
+    }
+
+    .section1_cabecalho_menu_logo_e_nome_icone{
+        height: 35px;
+        width: auto;
+    }
+
+    .section1_cabecalho_menu_logo_e_nome_nome{
+        font-size: 0.8rem;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 20;
+    }
+
+
+    .section1_cabecalho_menu_link {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 70px;
+        right: 10px;
+        width: 100px;
+        padding: 20px;
+        border-radius: 8px;
+        margin-left: 110px;
+    }
+
+    .section1_cabecalho_menu_link.active {
+        display: flex;
+        font-size: 0.8rem;
+        gap:0;
+        margin-right: 0px;
+    }
+
+    .section1_cabecalho_menu_link_link {
+        margin: 10px 0;
+    }
+
+    .section1_principal_topo_direito{
+        height: 405px;
+    }
+
+    .section1_principal_topo_direito_verde_claro {
+        height: 81px;
+        margin-top: 100px;
+        width: auto;
+        z-index: 1;
+    }
+
+    .section1_principal_topo_direito_verde_escuro {
+        height: 84px;
+        width: auto;
+        z-index: 2;
+        margin-right: 0px;
+        margin-top: 100px;
+    }
+
+    .section1_principal_topo_direito_slogan {
+        height: 71px;
+        width: auto;
+        margin-top: 100px;
+    }
+
+    .section1_principal_topo_direito_redes {
+        height: 20px;
+        margin-top: 103px;
+        margin-right: 28px;
+    }
+
+    .section1_principal_topo_direito_redes_face{
+        height: 9px;
+    }
+
+    .section1_principal_topo_direito_redes_instagram{
+        height: 9px;
+    }
+
+    .section1_principal_topo_direito_configuracoes{
+        display: none;
+    }
+
+    .section1_principal_titulo {
+        font-size: 1.1rem;
+        margin-left: 50px;
+        margin-top: 10px;
+    }
+
+    .section1_principal_texto{
+        font-size: 1rem;
+        margin-left: 50px;
+        margin-top: 30px;
+    }
+
+    .section1_principal_oval1{
+        width: 40px;
+        height: 40px;
+        margin-left: 280px;
+
+    }
+
+    .section1_principal_redes {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 150px;
+    }
+
+    .section1_principal_redes_botoes{
+        width: auto;
+        height: 20px;
+        margin-left: 50px;
+    }
+
+    .section1_principal_redes_botoes_whatsapp_preto{
+        width: auto;
+        height: 30px;
+    }
+
+    .section1_principal_redes_botoes_gmail{
+        width: auto;
+        height: 30px;
+
+    }
+
+    .section1_principal_oval2 {
+        width: 40px;
+        height: 40px;
+        margin-left: -31px;
+        margin-top: -92px;
+    }
+
+    .section1_principal_imagens{
+        width: 100%;
+        margin-top: 30px;
+    }
+
+
+    .section1_principal_imagens_fundo{
+        width: auto;
+        height: 30px;
+
+    }
+
+    .section1_principal_imagens_bolinhas {
+        width: auto;
+        height: 35px;
+        margin-left: -53px;
+        margin-top: -3px;
+    }
+
+    .section1_principal_botao_fale{
+        width: auto;
+        padding: 5px;
+        font-size: 0.8rem;
+        margin-top: 0px;
+        margin-left: 45px;
+
+    }
+
+    .section1_principal_icone_whatsapp_imagem {
+        width: 50px;
+        height: 50px;
+        /* object-fit: contain;
+        display: block; */
+    }
+
+    .section1_principal_icone_whatsapp {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+    }
+
+}
+
+@media  (min-width:369px) and (max-width: 480px) {
+
+    main{
+        margin-top: 45px;
+    }
+
+    .section1_cabecalho{
+        width: 100%;
+        margin-left: 20px;
+        z-index: 10000;
+        position: fixed;
+    }
+
+    .section1_cabecalho_menu {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .section1_cabecalho_menu_logo{
+        margin-top: 0;
+    }
+
+    .section1_cabecalho_menu_logo_e_nome_icone{
+        height: 35px;
+        width: auto;
+    }
+
+    .section1_cabecalho_menu_logo_e_nome_nome{
+        font-size: 0.8rem;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 20;
+    }
+
+
+    .section1_cabecalho_menu_link {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 70px;
+        right: 10px;
+        width: 100px;
+        padding: 20px;
+        border-radius: 8px;
+        margin-left: 110px;
+    }
+
+    .section1_cabecalho_menu_link.active {
+        display: flex;
+        font-size: 0.8rem;
+        gap: 0;
+    }
+
+    .section1_cabecalho_menu_link_link {
+        margin: 10px 0;
+    }
+
+    .section1_principal_topo_direito_verde_claro {
+        height: 105px;
+        margin-top: 100px;
+        width: auto;
+        z-index: 1;
+    }
+
+    .section1_principal_topo_direito_verde_escuro {
+        height: 109px;
+        width: auto;
+        z-index: 2;
+        margin-right: 0px;
+        margin-top: 100px;
+    }
+
+    .section1_principal_topo_direito_slogan {
+        height: 92px;
+        width: auto;
+        margin-top: 100px;
+    }
+
+    .section1_principal_topo_direito_redes {
+        height: 20px;
+        margin-top: 108px;
+        margin-right: 40px;
+    }
+
+    .section1_principal_topo_direito_redes_face{
+        height: 12px;
+    }
+
+    .section1_principal_topo_direito_redes_instagram{
+        height: 12px;
+    }
+
+    .section1_principal_topo_direito_configuracoes{
+        display: none;
+    }
+
+
+    .section1_principal_titulo{
+        font-size: 1.0rem;
+        margin-left: 50px;
+    }
+
+    .section1_principal_texto{
+        font-size: 1.0rem;
+        margin-left: 50px;
+    }
+
+    .section1_principal_oval1{
+        width: 40px;
+        height: 40px;
+        margin-left: 280px;
+
+    }
+
+    .section1_principal_redes {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 150px;
+    }
+
+    .section1_principal_redes_botoes{
+        width: auto;
+        height: 20px;
+        margin-left: 50px;
+    }
+
+    .section1_principal_redes_botoes_whatsapp_preto{
+        width: auto;
+        height: 30px;
+    }
+
+    .section1_principal_redes_botoes_gmail{
+        width: auto;
+        height: 30px;
+
+    }
+
+    .section1_principal_oval2 {
+        width: 40px;
+        height: 40px;
+        margin-left: -31px;
+        margin-top: -92px;
+    }
+
+    .section1_principal_imagens{
+        width: 100%;
+        margin-top: 30px;
+    }
+
+
+    .section1_principal_imagens_fundo{
+        width: auto;
+        height: 30px;
+
+    }
+
+    .section1_principal_imagens_bolinhas{
+        width: auto;
+        height: 35px;
+        margin-left: -53px;
+        margin-top: 1px;
+    }
+
+    .section1_principal_botao_fale{
+        width: auto;
+        padding: 5px;
+        font-size: 0.8rem;
+        margin-top: 0px;
+        margin-left: 45px;
+
+    }
+    
+
+    .section1_principal_icone_whatsapp_imagem {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        display: block;
+    }
+
+    .section1_principal_icone_whatsapp {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+    }
+
+}
+
+@media  (min-width:481px) and (max-width: 668px){
+
+    .section1_cabecalho{
+        width: 100%;
+        margin-left: 10px;
+        z-index: 10000;
+        position: fixed;
+        /* padding: 0px; */
+    }
+
+    .section1_cabecalho_menu {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .section1_cabecalho_menu_logo{
+        margin-top: 0;
+    }
+
+    .section1_cabecalho_menu_logo_e_nome_icone{
+        height: 35px;
+        width: auto;
+    }
+
+    .section1_cabecalho_menu_logo_e_nome_nome{
+        font-size: 0.8rem;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 20;
+    }
+
+    .section1_cabecalho_menu_link {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 70px;
+        right: 10px;
+        width: 100px;
+        padding: 20px;
+        border-radius: 8px;
+        margin-left: 110px;
+    }
+
+    .section1_cabecalho_menu_link.active {
+        display: flex;
+        font-size: 0.8rem;
+        gap:0;
+        margin-right: 0px;
+    }
+
+    .section1_cabecalho_menu_link_link {
+        margin: 10px 0;
+    }
+
+    .section1_principal_topo_direito {
+        height: 405px;
+        margin-left: -180px;
+    }
+
+    .section1_principal_topo_direito_verde_claro {
+        height: 115px;
+        margin-top: 100px;
+        width: auto;
+        z-index: 1;
+    }
+
+    .section1_principal_topo_direito_verde_escuro {
+        height: 119px;
+        width: auto;
+        z-index: 2;
+        margin-right: 0px;
+        margin-top: 100px;
+    }
+
+    .section1_principal_topo_direito_slogan {
+        height: 97px;
+        width: auto;
+        margin-top: 100px;
+    }
+
+    .section1_principal_topo_direito_redes {
+        height: 30px;
+        margin-top: 127px;
+        margin-right: 87px;
+    }
+
+    .section1_principal_topo_direito_redes_face{
+        height: 30px;
+    }
+
+    .section1_principal_topo_direito_redes_instagram{
+        height: 30px;
+    }
+
+    .section1_principal_topo_direito_configuracoes{
+        display: none;
+    }
+
+    .section1_principal_titulo {
+        font-size: 1.1rem;
+        margin-left: 50px;
+        margin-top: 10px;
+    }
+
+    .section1_principal_texto{
+        font-size: 1rem;
+        margin-left: 50px;
+        margin-top: 30px;
+    }
+
+    .section1_principal_oval1{
+        width: 40px;
+        height: 40px;
+        display: none;
+        margin-left: 280px;
+
+    }
+
+    .section1_principal_redes {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 150px;
+    }
+
+    .section1_principal_redes_botoes{
+        width: auto;
+        height: 20px;
+        margin-left: 50px;
+    }
+
+    .section1_principal_redes_botoes_whatsapp_preto{
+        width: auto;
+        height: 30px;
+    }
+
+    .section1_principal_redes_botoes_gmail{
+        width: auto;
+        height: 30px;
+
+    }
+
+    .section1_principal_oval2 {
+        width: 40px;
+        height: 40px;
+        display: none;
+        margin-top: -92px;
+    }
+
+    .section1_principal_imagens{
+        width: 100%;
+        margin-top: 30px;
+    }
+
+
+    .section1_principal_imagens_fundo{
+        width: auto;
+        height: 30px;
+
+    }
+
+    .section1_principal_imagens_bolinhas {
+        width: auto;
+        height: 35px;
+        margin-left: -53px;
+        margin-top: -3px;
+    }
+
+    .section1_principal_botao_fale{
+        width: auto;
+        padding: 5px;
+        font-size: 0.8rem;
+        margin-top: 0px;
+        margin-left: 45px;
+
+    }
+
+    .section1_principal_icone_whatsapp_imagem {
+        width: 50px;
+        height: 50px;
+        
+    }
+
+    .section1_principal_icone_whatsapp {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+    }
+
+}
+
+@media  (min-width:481px) and (max-width: 768px) {
+
+    .section1_cabecalho{
+        width: 100%;
+        margin-left: 20px;
+        z-index: 10000;
+        position: fixed;
+        
+    }
+
+    .section1_cabecalho_menu {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .section1_cabecalho_menu_logo{
+        margin-top: 0;
+    }
+
+    .section1_cabecalho_menu_logo_e_nome_icone{
+        height: 35px;
+        width: auto;
+    }
+
+    .section1_cabecalho_menu_logo_e_nome_nome{
+        font-size: 0.8rem;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 20;
+    }
+
+
+    .section1_cabecalho_menu_link {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 70px;
+        right: 10px;
+        width: 100px;
+        padding: 20px;
+        border-radius: 8px;
+        margin-left: 110px;
+    }
+
+    .section1_cabecalho_menu_link.active {
+        display: flex;
+        font-size: 0.8rem;
+        gap: 0px;
+        margin-right: -5px;
+    }
+
+    .section1_cabecalho_menu_link_link {
+        padding: 4px;
+        margin-left: -15px;
+    }
+
+    .section1_principal_topo_direito_verde_claro {
+        height: 115px;
+        margin-top: 100px;
+        width: auto;
+        z-index: 1;
+    }
+
+    .section1_principal_topo_direito_verde_escuro {
+        height: 119px;
+        width: auto;
+        z-index: 2;
+        margin-right: 0px;
+        margin-top: 100px;
+    }
+
+    .section1_principal_topo_direito_slogan {
+        height: 97px;
+        width: auto;
+        margin-top: 100px;
+    }
+
+    .section1_principal_topo_direito_redes {
+        height: 20px;
+        margin-top: 109px;
+        margin-right: 41px;
+    }
+
+    .section1_principal_topo_direito_redes_face{
+        height: 16px;
+    }
+
+    .section1_principal_topo_direito_redes_instagram{
+        height: 16px;
+    }
+
+    .section1_principal_topo_direito_configuracoes{
+        display: none;
+    }
+
+
+    .section1_principal_titulo {
+        font-size: 1.2rem;
+        margin-left: 50px;
+        margin-top: 30px;
+    }
+
+    .section1_principal_texto {
+        font-size: 1.3rem;
+        margin-left: 50px;
+        margin-top: 100px;
+    }
+
+    .section1_principal_oval1 {
+        width: 80px;
+        height: 80px;
+        margin-left: 500px;
+    }
+
+    .section1_principal_redes {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 130px;
+    }
+
+    .section1_principal_redes_botoes{
+        width: auto;
+        height: 20px;
+        margin-left: 50px;
+    }
+
+    .section1_principal_redes_botoes_whatsapp_preto {
+        width: auto;
+        height: 45px;
+    }
+
+    .section1_principal_redes_botoes_gmail{
+        width: auto;
+        height: 45px;
+
+    }
+
+    .section1_principal_oval2 {
+        width: 80px;
+        height: 80px;
+        margin-left: 80px;
+        margin-top: -92px;
+    }
+
+    .section1_principal_imagens {
+        width: 100%;
+        margin-top: 80px;
+    }
+
+
+    .section1_principal_imagens_fundo {
+        width: auto;
+        height: 60px;
+        margin-left: 55px;
+        margin-top: -20px;
+    }
+
+    .section1_principal_imagens_bolinhas {
+        width: auto;
+        height: 75px;
+        margin-left: -105px;
+        margin-top: -30px;
+    }
+
+    .section1_principal_botao_fale {
+        width: 250px;
+        padding: 10px;
+        font-size: 1.4rem;
+        margin-top: 0px;
+        margin-left: 105px;
+    }
+
+
+    .section1_principal_icone_whatsapp_imagem {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        display: block;
+    }
+
+    .section1_principal_icone_whatsapp {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+    }
+
+}
+
+@media (min-width:769px) and (max-width: 878px) {
+
+    .section1_cabecalho {
+        width: 70%;
+        margin-left: 20px;
+        z-index: 10000;
+        position: fixed;
+    }
+
+    .section1_cabecalho_menu {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .section1_cabecalho_menu_logo{
+        margin-top: 0;
+    }
+
+    .section1_cabecalho_menu_logo_e_nome_icone{
+        height: 35px;
+        width: auto;
+    }
+
+    .section1_cabecalho_menu_logo_e_nome_nome{
+        font-size: 0.8rem;
+    }
+
+    
+    .section1_cabecalho_menu_link {
+        justify-content: space-between;
+        gap: 10px;
+        display: flex;
+        font-size: 1.0rem;
+        margin-right: 105px;
+    }
+    
+    .section1_cabecalho_menu_link_link{
+        text-decoration: none;
+        color: #DAFF7C;
+        margin-top: 10px;
+        font-family: 'Gotham Black';
+    }
+    
+    .section1_cabecalho_menu_link_link:hover{
+        cursor: pointer;
+        color: white;
+        transition: color 0.3 ease;
+    }
+
+    .section1_principal_topo_direito {
+        height: 405px;
+        margin-left: -90px;
+    }
+
+    .section1_principal_topo_direito_verde_claro {
+        height: 155px;
+        margin-top: 100px;
+        width: auto;
+        z-index: 1;
+    }
+
+    .section1_principal_topo_direito_verde_escuro {
+        height: 159px;
+        width: auto;
+        z-index: 2;
+        margin-right: 0px;
+        margin-top: 100px;
+    }
+
+    .section1_principal_topo_direito_slogan {
+        height: 132px;
+        width: auto;
+        margin-top: 100px;
+    }
+
+    .section1_principal_topo_direito_redes{
+        height: 20px;
+        margin-top: 117px;
+        margin-right: 57px;
+    }
+
+    .section1_principal_topo_direito_redes_face{
+        height: 20px;
+    }
+
+    .section1_principal_topo_direito_redes_instagram{
+        height: 20px;
+    }
+
+    .section1_principal_topo_direito_configuracoes{
+        display: none;
+    }
+
+
+    .section1_principal_titulo {
+        font-size: 2.5rem;
+        margin-left: 50px;
+    }
+
+    .section1_principal_texto {
+        font-size: 1.4rem;
+        margin-left: 50px;
+    }
+
+    .section1_principal_oval1 {
+        width: 80px;
+        height: 80px;
+        display: none;
+    }
+
+    .section1_principal_redes {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 150px;
+    }
+
+    .section1_principal_redes_botoes{
+        width: auto;
+        height: 20px;
+        margin-left: 50px;
+    }
+
+    .section1_principal_redes_botoes_whatsapp_preto {
+        width: auto;
+        height: 50px;
+    }
+
+    .section1_principal_redes_botoes_gmail {
+        width: auto;
+        height: 50px;
+    }
+
+    .section1_principal_oval2 {
+        width: 80px;
+        height: 80px;
+        margin-left: 171px;
+        margin-top: -92px;
+    }
+
+    .section1_principal_imagens {
+        width: 100%;
+        margin-top: 100px;
+    }
+
+    .section1_principal_imagens_fundo {
+        width: auto;
+        height: 50px;
+    }
+
+    .section1_principal_imagens_bolinhas {
+        width: auto;
+        height: 55px;
+        margin-left: -83px;
+        margin-top: 0px;
+    }
+
+    .section1_principal_botao_fale {
+        width: 20%;
+        padding: 5px;
+        font-size: 1.0rem;
+        margin-top: 0px;
+        margin-left: 275px;
+    }
+
+    .section1_principal_icone_whatsapp_imagem {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        display: block;
+    }
+
+    .section1_principal_icone_whatsapp {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+    }  
+}
+
+@media (min-width:879px) and (max-width: 1024px) {
+
+    .section1_cabecalho {
+        width: 70%;
+        margin-left: 20px;
+        z-index: 10000;
+        position: fixed;
+    }
+
+    .section1_cabecalho_menu {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .section1_cabecalho_menu_logo{
+        margin-top: 0;
+    }
+
+    .section1_cabecalho_menu_logo_e_nome_icone{
+        height: 35px;
+        width: auto;
+    }
+
+    .section1_cabecalho_menu_logo_e_nome_nome{
+        font-size: 0.8rem;
+    }
+
+    
+    .section1_cabecalho_menu_link {
+        justify-content: space-between;
+        gap: 10px;
+        display: flex;
+        font-size: 1.0rem;
+        margin-left: 5px;
+    }
+    
+    .section1_cabecalho_menu_link_link{
+        text-decoration: none;
+        color: #DAFF7C;
+        margin-top: 10px;
+        font-family: 'Gotham Black';
+    }
+    
+    .section1_cabecalho_menu_link_link:hover{
+        cursor: pointer;
+        color: white;
+        transition: color 0.3 ease;
+    }
+
+    .section1_principal_topo_direito {
+        height: 205px;
+        margin-left: -90px;
+        /* margin-top: 90px; */
+    }
+
+    .section1_principal_topo_direito_verde_claro {
+        height: 155px;
+        margin-top: 0px;
+        width: auto;
+        z-index: 1;
+    }
+
+    .section1_principal_topo_direito_verde_escuro {
+        height: 159px;
+        width: auto;
+        z-index: 2;
+        margin-right: 0px;
+        margin-top: 0px;
+    }
+
+    .section1_principal_topo_direito_slogan {
+        height: 132px;
+        width: auto;
+        margin-top: 0px;
+    }
+
+    .section1_principal_topo_direito_redes{
+        height: 20px;
+        margin-top: 17px;
+        margin-right: 57px;
+    }
+
+    .section1_principal_topo_direito_redes_face{
+        height: 20px;
+    }
+
+    .section1_principal_topo_direito_redes_instagram{
+        height: 20px;
+    }
+
+    .section1_principal_topo_direito_configuracoes{
+        display: none;
+    }
+
+
+    .section1_principal_titulo {
+        font-size: 2.5rem;
+        margin-left: 50px;
+    }
+
+    .section1_principal_texto {
+        font-size: 1.4rem;
+        margin-left: 50px;
+    }
+
+    .section1_principal_oval1 {
+        width: 80px;
+        height: 80px;
+        margin-left: 780px;
+    }
+
+    .section1_principal_redes {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 150px;
+    }
+
+    .section1_principal_redes_botoes{
+        width: auto;
+        height: 20px;
+        margin-left: 50px;
+    }
+
+    .section1_principal_redes_botoes_whatsapp_preto {
+        width: auto;
+        height: 50px;
+    }
+
+    .section1_principal_redes_botoes_gmail {
+        width: auto;
+        height: 50px;
+    }
+
+    .section1_principal_oval2 {
+        width: 80px;
+        height: 80px;
+        margin-left: 171px;
+        margin-top: -92px;
+    }
+
+    .section1_principal_imagens {
+        width: 100%;
+        margin-top: 100px;
+    }
+
+    .section1_principal_imagens_fundo {
+        width: auto;
+        height: 50px;
+    }
+
+    .section1_principal_imagens_bolinhas {
+        width: auto;
+        height: 55px;
+        margin-left: -83px;
+        margin-top: 0px;
+    }
+
+    .section1_principal_botao_fale {
+        width: 20%;
+        padding: 5px;
+        font-size: 1.0rem;
+        margin-top: 0px;
+        margin-left: 275px;
+    }
+
+    .section1_principal_icone_whatsapp_imagem {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        display: block;
+    }
+
+    .section1_principal_icone_whatsapp {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+    }
+
+ 
+    
+}
+
+@media (min-width:1025px) and (max-width: 1280px) {
+
+    .section1_cabecalho {
+        width: 64%;
+        margin-left: 20px;
+        z-index: 300;
+        position: fixed;
+    }
+
+    .section1_cabecalho_menu {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .section1_cabecalho_menu_logo{
+        margin-top: 0;
+    }
+
+    .section1_cabecalho_menu_logo_e_nome_icone{
+        height: 35px;
+        width: auto;
+    }
+
+    .section1_cabecalho_menu_logo_e_nome_nome{
+        font-size: 0.8rem;
+    }
+
+    
+    .section1_cabecalho_menu_link {
+        justify-content: space-between;
+        gap: 11px;
+        display: flex;
+        font-size: 1.0rem;
+        margin-left: 8px;
+    }
+    
+    .section1_cabecalho_menu_link_link{
+        text-decoration: none;
+        color: #DAFF7C;
+        margin-top: 10px;
+        font-family: 'Gotham Black';
+    }
+    
+    .section1_cabecalho_menu_link_link:hover{
+        cursor: pointer;
+        color: white;
+        transition: color 0.3 ease;
+    }
+
+    .section1_principal_topo_direito_verde_claro {
+        height: 265px;
+        /* margin-top: 104px; */
+        width: 450px;
+        z-index: 1;
+    }
+
+    .section1_principal_topo_direito_verde_escuro {
+        height: 289px;
+        width: auto;
+        z-index: 2;
+        margin-right: 0px;
+        /* margin-top: 103px; */
+    }
+
+    .section1_principal_topo_direito_slogan {
+        height: 232px;
+        width: auto;
+        /* margin-top: 100px; */
+    }
+
+    .section1_principal_topo_direito_redes {
+        height: 40px;
+        margin-top: 20px;
+        margin-right: 110px;
+    }
+
+    .section1_principal_topo_direito_redes_face{
+        height: 30px;
+    }
+
+    .section1_principal_topo_direito_redes_instagram{
+        height: 30px;
+    }
+
+    .section1_principal_topo_direito_configuracoes{
+        display: none;
+    }
+
+    .section1_principal_titulo {
+        font-size: 2.5rem;
+        margin-left: 50px;
+    }
+
+    .section1_principal_texto {
+        font-size: 1.4rem;
+        margin-left: 50px;
+    }
+
+    .section1_principal_oval1 {
+        width: 80px;
+        height: 80px;
+        margin-left: 780px;
+    }
+
+    .section1_principal_redes {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 150px;
+    }
+
+    .section1_principal_redes_botoes{
+        width: auto;
+        height: 20px;
+        margin-left: 50px;
+    }
+
+    .section1_principal_redes_botoes_whatsapp_preto {
+        width: auto;
+        height: 50px;
+    }
+
+    .section1_principal_redes_botoes_gmail {
+        width: auto;
+        height: 50px;
+    }
+
+    .section1_principal_oval2 {
+        width: 80px;
+        height: 80px;
+        margin-left: 171px;
+        margin-top: -92px;
+    }
+
+    .section1_principal_imagens {
+        width: 100%;
+        margin-top: 100px;
+    }
+
+    .section1_principal_imagens_fundo {
+        width: auto;
+        height: 50px;
+    }
+
+    .section1_principal_imagens_bolinhas {
+        width: auto;
+        height: 55px;
+        margin-left: -83px;
+        margin-top: 0px;
+    }
+
+    .section1_principal_botao_fale {
+        width: 20%;
+        padding: 5px;
+        font-size: 1.0rem;
+        margin-top: 0px;
+        margin-left: 375px;
+    }
+
+    .section1_principal_icone_whatsapp_imagem {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        display: block;
+    }
+
+    .section1_principal_icone_whatsapp {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+    }
+    
+}
+
+@media (min-width:1281px) and (max-width: 1440px) {
+
+    .section1_cabecalho {
+        width: 65%;
+        margin-left: 20px;
+        z-index: 10000;
+        position: fixed;
+    }
+
+    .section1_cabecalho_menu {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .section1_cabecalho_menu_logo{
+        margin-top: 0;
+    }
+
+    .section1_cabecalho_menu_logo_e_nome_icone{
+        height: 35px;
+        width: auto;
+    }
+
+    .section1_cabecalho_menu_logo_e_nome_nome{
+        font-size: 0.8rem;
+    }
+
+    
+    .section1_cabecalho_menu_link {
+        justify-content: space-between;
+        gap: 15px;
+        display: flex;
+        font-size: 1.2rem;
+        margin-right: 185px;
+    }
+    
+    .section1_cabecalho_menu_link_link{
+        text-decoration: none;
+        color: #DAFF7C;
+        margin-top: 10px;
+        font-family: 'Gotham Black';
+    }
+    
+    .section1_cabecalho_menu_link_link:hover{
+        cursor: pointer;
+        color: white;
+        transition: color 0.3 ease;
+    }
+
+    .section1_principal_topo_direito_verde_claro {
+        height: 325px;
+        margin-top: 0px;
+        width: 530px;
+        z-index: 1;
+    }
+
+    .section1_principal_topo_direito_verde_escuro {
+        height: 349px;
+        width: auto;
+        z-index: 2;
+        margin-right: 0px;
+        margin-top: 0px;
+    }
+
+    .section1_principal_topo_direito_slogan {
+        height: 282px;
+        width: auto;
+        margin-top: 0px;
+    }
+
+    .section1_principal_topo_direito_redes {
+        height: 40px;
+        margin-top: 30px;
+        margin-right: 140px;
+    }
+
+    .section1_principal_topo_direito_redes_face{
+        height: 30px;
+    }
+
+    .section1_principal_topo_direito_redes_instagram{
+        height: 30px;
+    }
+
+    .section1_principal_topo_direito_configuracoes{
+        display: none;
+    }
+
+    .section1_principal_titulo {
+        font-size: 2.5rem;
+        margin-left: 50px;
+    }
+
+    .section1_principal_texto {
+        font-size: 1.4rem;
+        margin-left: 50px;
+    }
+
+    .section1_principal_oval1 {
+        width: 80px;
+        height: 80px;
+        margin-left: 780px;
+    }
+
+    .section1_principal_redes {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 150px;
+    }
+
+    .section1_principal_redes_botoes{
+        width: auto;
+        height: 20px;
+        margin-left: 50px;
+    }
+
+    .section1_principal_redes_botoes_whatsapp_preto {
+        width: auto;
+        height: 50px;
+    }
+
+    .section1_principal_redes_botoes_gmail {
+        width: auto;
+        height: 50px;
+    }
+
+    .section1_principal_oval2 {
+        width: 80px;
+        height: 80px;
+        margin-left: 171px;
+        margin-top: -92px;
+    }
+
+    .section1_principal_imagens {
+        width: 100%;
+        margin-top: 100px;
+    }
+
+    .section1_principal_imagens_fundo {
+        width: auto;
+        height: 50px;
+    }
+
+    .section1_principal_imagens_bolinhas {
+        width: auto;
+        height: 55px;
+        margin-left
+        : -83px;
+        margin-top: 0px;
+    }
+
+    .section1_principal_botao_fale {
+        width: 20%;
+        padding: 5px;
+        font-size: 1.0rem;
+        margin-top: 0px;
+        margin-left: 405px;
+    }
+
+    .section1_principal_icone_whatsapp_imagem {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        display: block;
+    }
+
+    .section1_principal_icone_whatsapp {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+    }
+    
+}
+
+@media (min-width:1441px) and (max-width: 1770px) {
+
+    .section1_cabecalho {
+        width: 45%;
+        margin-left: 20px;
+        z-index: 10000;
+        position: fixed;
+    }
+
+    .section1_cabecalho_menu {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .section1_cabecalho_menu_logo{
+        margin-top: 0;
+    }
+
+    .section1_cabecalho_menu_logo_e_nome_icone{
+        height: 35px;
+        width: auto;
+    }
+
+    .section1_cabecalho_menu_logo_e_nome_nome{
+        font-size: 0.8rem;
+    }
+
+    
+    .section1_cabecalho_menu_link {
+        justify-content: space-between;
+        gap: 15px;
+        display: flex;
+        font-size: 1.0rem;
+        margin-right: 185px;
+    }
+    
+    .section1_cabecalho_menu_link_link{
+        text-decoration: none;
+        color: #DAFF7C;
+        margin-top: 10px;
+        font-family: 'Gotham Black';
+    }
+    
+    .section1_cabecalho_menu_link_link:hover{
+        cursor: pointer;
+        color: white;
+        transition: color 0.3 ease;
+    }
+
+    .section1_principal_topo_direito_verde_claro {
+        height: 405px;
+        margin-top: 0px;
+        width: 690px;
+        z-index: 1;
+    }
+
+    .section1_principal_topo_direito_verde_escuro {
+        height: 439px;
+        width: auto;
+        z-index: 2;
+        margin-right: 0px;
+        margin-top: 0px;
+    }
+
+    .section1_principal_topo_direito_slogan {
+        height: 352px;
+        width: auto;
+        margin-top: 0px;
+    }
+
+    .section1_principal_topo_direito_redes {
+        height: 40px;
+        margin-top: 35px;
+        margin-right: 180px;
+    }
+
+    .section1_principal_topo_direito_redes_face{
+        height: 30px;
+    }
+
+    .section1_principal_topo_direito_redes_instagram{
+        height: 30px;
+    }
+
+    .section1_principal_topo_direito_configuracoes{
+        display: none;
+    }
+
+    .section1_principal_titulo {
+        font-size: 2.5rem;
+        margin-left: 50px;
+    }
+
+    .section1_principal_texto {
+        font-size: 1.4rem;
+        margin-left: 50px;
+    }
+
+    .section1_principal_oval1 {
+        width: 80px;
+        height: 80px;
+        margin-left: 980px;
+    }
+
+    .section1_principal_redes {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 150px;
+    }
+
+    .section1_principal_redes_botoes{
+        width: auto;
+        height: 20px;
+        margin-left: 50px;
+    }
+
+    .section1_principal_redes_botoes_whatsapp_preto {
+        width: auto;
+        height: 50px;
+    }
+
+    .section1_principal_redes_botoes_gmail {
+        width: auto;
+        height: 50px;
+    }
+
+    .section1_principal_oval2 {
+        width: 80px;
+        height: 80px;
+        margin-left: 371px;
+        margin-top: -92px;
+    }
+
+    .section1_principal_imagens {
+        width: 100%;
+        margin-top: 100px;
+    }
+
+    .section1_principal_imagens_fundo {
+        width: auto;
+        height: 50px;
+    }
+
+    .section1_principal_imagens_bolinhas {
+        width: auto;
+        height: 55px;
+        margin-left: -83px;
+        margin-top: 0px;
+    }
+
+    .section1_principal_botao_fale {
+        width: 20%;
+        padding: 5px;
+        font-size: 1.0rem;
+        margin-top: 0px;
+        margin-left: 555px;
+    }
+
+    .section1_principal_icone_whatsapp_imagem {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        display: block;
+    }
+
+    .section1_principal_icone_whatsapp {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+    }
+    
+}
+
+@font-face {
+    font-family: 'Gotham Black';
+    src: url(/Gotham-Black.otf) format(opentype);
+}
+
+@font-face {
+    font-family: 'Gotham Book';
+    src: url(/GothamBook.ttf) format(truetype);
+}
+
+.section2 {
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.section2_titulo {
+    font-size: 24px;
+    color: #DAFF7C;
+    font-family: 'Gotham Black';
+    margin-top: 50px;
+    text-align: center;
+}
+
+#equipe::before {
+    content: "";
+    display: block;
+    height: 80px;
+    margin-top: -15px;
+    visibility: hidden;
+}
+
+.carousel_sc2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.funcio_00 {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-family: 'Gotham Black';
+}
+
+.funcio_00.active {
+    display: flex;
+}
+
+.img_profile {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-color: 10px;
+    /* border-radius: 50%; */
+    padding: 15px;
+}
+
+/* .img_profile a {
+    background-color: #DAFF7C;
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 20px;
+} */
+
+.carousel_sc2_fotos_equipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    
+    border-radius: 50px; 
+}
+
+.carousel_sc2_fotos_equipe img {
+    width: 900px ;
+    max-width: 400px;
+    /* height: 400px;  */
+    object-fit: cover; /* Mantém proporção e corta bordas extras */
+    /* border-radius: 50%; */
+}
+
+
+.carousel_sc2_fotos_equipe h3 {
+    font-size: 20px;
+    color: #DAFF7C;
+    text-align: center;
+}
+
+.info_user {
+    width: 100%;
+    max-width: 750px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.info_user p {
+    font-size: 28px;
+    color: #f4f4f4;
+    font-weight: bold;
+    font-family: 'Gotham Book';
+    text-align: center;
+    margin-top: 50px;
+
+}
+
+.funcio_00 {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    position: absolute;
+    width: 100%;
+}
+
+.funcio_00.active {
+    opacity: 1;
+    position: relative;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .info_user {
+        max-width: 90%;
+    }
+
+    .carousel_sc2_fotos_equipe img {
+        max-width: 250px;
+    }
+
+    .carousel_sc2_fotos_equipe h3 {
+        font-size: 18px;
+    }
+
+    .info_user p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .img_profile {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .info_user {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .carousel_sc2_fotos_equipe img {
+        max-width: 200px;
+    }
+
+    .carousel_sc2_fotos_equipe h3 {
+        font-size: 16px;
+    }
+
+    .info_user p {
+        font-size: 14px;
+    }
+
+    .img_profile a {
+        font-size: 16px;
+        padding: 8px;
+    }
+}
+
+
+/* inicio section antonio mychel */
+
+
+
+
+.section_03 {
+    /* width: 100%;
+    height: 100%; */
+    background-color: #131111;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    width: 100vw;
+}
+
+.section_03_img_left {
+    position: fixed;
+    top: 0;
+    left: -480px;
+    height: 100vh;
+    width: 50vw;
+    object-fit: cover;
+    object-position: right;
+    z-index: 0;
+    clip-path: inset(0 0 0 50%);
+}
+
+.section_03_img_right {
+    position: fixed;
+    top: 0;
+    right: -480px;
+    height: 100vh;
+    width: 50vw;
+    object-fit: cover;
+    object-position: left;
+    z-index: 0;
+    clip-path: inset(0 50% 0 0);
+}
+
+.section_03_title_container {
+    margin-top: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.section_03_title {
+    font-family: 'Gotham Black', Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.section_03_card h2,
+.section_03_card p {
+    font-family: 'Gotham Book', Arial, sans-serif;
+}
+
+.section_03_carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 900px;
+    position: relative;
+    z-index: 1;
+}
+
+.section_03_card_container {
+    margin-top: 120px;
+    position: relative;
+    width: 320px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+}
+
+.section_03_card {
+    position: absolute;
+    background: #3a3434;
+    padding: 20px;
+    width: 280px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    color: white;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    opacity: 0;
+    transform: scale(0.9) translateX(100%);
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out, z-index 0s 0.6s;
+    z-index: 1;
+}
+
+.section_03_card::before {
+    content: '';
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    width: calc(100% + 50px);
+    height: calc(100% + 50px);
+    background: linear-gradient(45deg, #99d500, #afeb17);
+    background-size: 400% 400%;
+    animation: rotateBorder 4s linear infinite;
+    z-index: -1;
+}
+
+.section_03_card::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    background-color: #3a3434;
+    border-radius: 8px;
+    z-index: -1;
+}
+
+@keyframes rotateBorder {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.section_03_card.section_03_card_previous {
+    transform: scale(0.75) translateX(-80%);
+    opacity: 0.2;
+    z-index: 1;
+}
+
+.section_03_card.section_03_card_next {
+    transform: scale(0.75) translateX(80%);
+    opacity: 0.2;
+    z-index: 1;
+}
+
+.section_03_card.section_03_card_active {
+    transform: scale(1) translateX(0);
+    opacity: 1;
+    z-index: 2;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.section_03_card.section_03_card_hidden {
+    opacity: 0;
+    transform: scale(0.9) translateX(-100%);
+    z-index: 0;
+}
+
+.section_03_prev_btn,
+.section_03_next_btn {
+    background: #daff7c;
+    color: #111;
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    z-index: 10;
+    text-align: center;
+    line-height: 45px;
+}
+
+.section_03_prev_btn { left: 10px; }
+.section_03_next_btn { right: 10px; }
+
+.section_03_prev_btn:hover,
+.section_03_next_btn:hover {
+    background: #eaff8f;
+}
+
+@media (max-width: 367px) {
+    .section_03_card {
+        background-color: white;
+        width: 100px;
+        height: 100px;
+    }
+    .section_03_img_left,
+    .section_03_img_right {
+        position: fixed;
+        width: 100vw;
+        height: 50vh;
+        clip-path: none;
+    }
+    .section_03_img_left {
+        top: 0;
+        left: 0;
+        object-position: center;
+    }
+    .section_03_img_right {
+        top: 50vh;
+        right: 0;
+        object-position: center;
+    }
+}
+
+@media (max-width: 464px) {
+    .section_03_card {
+        width: 200px;
+        height: 150px;
+    }
+    .section_03_img_left,
+    .section_03_img_right {
+        position: fixed;
+        width: 100vw;
+        height: 50vh;
+        clip-path: none;
+    }
+    .section_03_img_left {
+        top: 0;
+        left: 0;
+        object-position: center;
+    }
+    .section_03_img_right {
+        top: 50vh;
+        right: 0;
+        object-position: center;
+    }
+}
+
+@media (max-width: 545px) {
+    .section_03_card.section_03_card_previous,
+    .section_03_card.section_03_card_next {
+        display: none;
+    }
+    .section_03_prev_btn,
+    .section_03_next_btn {
+        font-size: 18px;
+    }
+    .section_03_img_left,
+    .section_03_img_right {
+        position: fixed;
+        width: 100vw;
+        height: 50vh;
+        clip-path: none;
+    }
+    .section_03_img_left {
+        top: 0;
+        left: 0;
+        object-position: center;
+    }
+    .section_03_img_right {
+        top: 50vh;
+        right: 0;
+        object-position: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .section_03 {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+    }
+    .section_03_card.section_03_card_previous,
+    .section_03_card.section_03_card_next {
+        display: none;
+    }
+    .section_03_prev_btn,
+    .section_03_next_btn {
+        font-size: 10px;
+    }
+    .section_03_img_left,
+    .section_03_img_right {
+        position: fixed;
+        width: 100vw;
+        height: 50vh;
+        clip-path: none;
+    }
+    .section_03_img_left {
+        top: 0;
+        left: 0;
+        object-position: center;
+    }
+    .section_03_img_right {
+        top: 50vh;
+        right: 0;
+        object-position: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .section_03 {
+        padding: 20px;
+        display: flex;
+        align-items: center;
+    }
+    .section_03_title {
+        font-size: 1.5rem;
+    }
+    .section_03_card.section_03_card_previous,
+    .section_03_card.section_03_card_next {
+        display: none;
+    }
+    .section_03_prev_btn,
+    .section_03_next_btn {
+        font-size: 18px;
+    }
+    .section_03_img_left,
+    .section_03_img_right {
+        display: none;
+    }
+}
+/*fim antonio*/
+
+.section5{
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+   
+}
+
+.items{
+    height: 450px;
+    width: 200px;
+    display: grid;
+    position: relative;
+    background: black;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px 5px #DAFF7C; /* Ajustando o brilho */
+    
+}
+
+
+.items::before, .items::after{
+    content: " ";
+    position: absolute;
+    width: calc(100% + 3px);
+    height: calc(100% + 3px);
+    z-index: -1;
+    background: linear-gradient(45deg,  #DAFF7C, white,  #DAFF7C,  transparent, #DAFF7C,
+     white, transparent);
+    background-size: 300%;
+    border-radius: 8px;
+    animation: Animacao 8s linear alternate infinite;
+    
+}
+
+
+.items::after{
+    filter: blur(20px);
+
+}
+
+@keyframes Animacao{
+    to{
+        background-position: 0;
+    }
+    from{
+        background-position: 300%;
+    }
+
+}
+
+.quadros{
+    display: flex;
+    align-items: center;
+    gap: 90px;
+    justify-content: center;
+    width: 100%;
+    font-size: 15px;
+    margin: 0 0 150px 0;
+    
+}
+ 
+.titulo_servico_5 {
+    font-family: 'Gotham Black';
+    color: #DAFF7C;
+    font-size: 40px;
+    margin-bottom: 9%;
+    margin-top: 2%;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#servicos::before {
+    content: "";
+    display: block;
+    height: 80px;
+    margin-top: 27px;
+    visibility: hidden;
+}
+
+
+
+.paragrafo{
+    font-size: 18px;
+    align-items: center;
+    position: relative;
+}
+
+.sub_div{
+    color: #DAFF7C;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.titulo{
+    flex-grow: 1;
+}
+
+.saiba_mais{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    font-size: 20px;
+}
+
+.saiba_mais:hover{
+    color: #DAFF7C;
+    transform: scale(0.9);
+    transition: 1s ease-in-out;
+
+}
+
+.icons{
+    width: 2rem;
+    height: 2rem;
+    object-fit: cover;
+   flex-shrink: 0;
+
+}
+
+
+@keyframes colorChange{
+    100%{
+        color: #d9f7bb;
+        
+    }
+    100%{
+        color: #e1faa6;
+
+    }
+    100%{
+        color: #c7f359;
+
+    }
+    100%{
+        color: #bbf528;
+    }
+    100%{
+        color: #adee07;
+
+    }
+    
+}
+
+@media (max-width: 878px) {
+    .section5 {
+        display: flex;
+        align-items: center;
+    }
+
+    .quadros {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+}
+
+
+@media (max-width: 1154px) {
+
+    .section5 {
+        display: flex;
+        align-items: center;
+    }
+
+    .quadros {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .items {
+        width: 90%;
+        max-width: 400px;
+        height: auto;
+        padding: 20px;
+    }
+
+    .sub_div {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .saiba_mais {
+        justify-content: center;
+    }
+
+    .paragrafo {
+        font-size: 18px;
+        text-align: center;
+    }
+}
+
+#parceiros::before {
+    content: "";
+    display: block;
+    height: 80px;
+    margin-top: -47px;
+    visibility: hidden;
+    
+}
+/*Começo da section 6*/
+.session_6_texto_titulo {
+    margin-left: 0.625rem; /* 10px */
+    font-size: 2.5rem; /* 40px */
+    text-align: center;
+    justify-content: center;
+    font-family: 'Gotham Black';
+    color: #DAFF7C;
+    margin: 0 0 3.125rem 0; /* 50px 0px 50px 50px */
+}
+
+/* Container principal dos parceiros - ajustado */
+.session_6_parceiros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 3rem 2rem;
+    border-radius: 1.25rem;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    max-width: 1200px;
+    margin: 2rem auto;
+    border: 2px solid #DAFF7C;
+    box-shadow: 0 0 15px #DAFF7C, 
+                0 0 30px rgba(218, 255, 124, 0.5),
+                inset 0 0 10px #DAFF7C;
+    min-height: 25rem; /* Altura mínima ajustada */
+}
+
+
+/* Container principal do carrossel */
+.session_6_parceiros {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 5vh;
+}
+
+/* Container interno que vai animar */
+.session_6_parceiros_inner {
+    display: flex;
+    position: relative;
+    will-change: transform;
+    gap: 3.125rem; /* Espaço entre os itens */
+}
+
+/* Itens do carrossel */
+.session_6_parceiros_foto {
+    flex: 0 0 auto; /* Impede que os itens encolham */
+    width: 21.875rem; /* Largura fixa */
+    height: 22.5rem;
+    /* Mantenha seus outros estilos... */
+}
+/* Container do carrossel - ajustado */
+.session_6_parceiros {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centraliza verticalmente */
+    margin-bottom: 10vh; /* Reduzi a margem inferior */
+    width: 100%;
+    height: 25rem; /* Altura fixa para o carrossel */
+}
+
+/* Container interno do carrossel - ajustado */
+.session_6_parceiros_inner {
+    display: flex;
+    position: absolute;
+    left: 0;
+    will-change: transform;
+    align-items: center; /* Centraliza os itens verticalmente */
+    height: 100%; /* Ocupa toda a altura do container */
+}
+
+/* Item do parceiro - ajustado */
+.session_6_parceiros_foto {
+    display: flex;
+    background-color: #3A3434;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 21.875rem;
+    height: 20rem; /* Reduzi a altura */
+    margin: 0 0 3.5rem 0.5rem; /* Margem lateral reduzida */
+    padding: 0.625rem;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    flex-shrink: 0;
+    position: relative;
+    color: #ffffff;
+    border: 2px solid #DAFF7C;
+    box-shadow: 0 0 10px #DAFF7C, 0 0 20px #DAFF7C;
+    transition: transform 0.3s ease; /* Suaviza o hover */
+}
+
+/* Efeito de hover - ajustado para não interferir com o carrossel */
+.session_6_parceiros_foto:hover {
+    transform: scale(1.02); /* Efeito sutil ao passar o mouse */
+    z-index: 1; /* Garante que o item hover fique acima dos outros */
+}
+
+/* Ajuste das imagens */
+.session6_img {
+    width: 12rem;
+    height: 12rem; /* Reduzi a altura para manter proporção */
+    object-fit: contain; /* Garante que a imagem não distorça */
+}
+
+/* Texto abaixo da imagem */
+.session6_texto_imagens {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Mudei para center para melhor legibilidade */
+    width: 100%;
+    font-family: 'Gotham Book';
+    font-size: 0.8rem;
+    padding: 0 1rem;
+    margin-top: 0.5rem;
+}
+
+/* Removi os pseudo-elementos before/after que estavam causando problemas */
+.session_6_parceiros_foto::before, 
+.session_6_parceiros_foto::after {
+    content: none;
+}
+
+/* Adicionei uma animação de brilho na borda ao hover */
+.session_6_parceiros_foto:hover {
+    animation: borderPulse 1.5s infinite alternate;
+}
+
+@keyframes borderPulse {
+    0% {
+        box-shadow: 0 0 10px #DAFF7C, 0 0 20px #DAFF7C;
+    }
+    100% {
+        box-shadow: 0 0 15px #DAFF7C, 0 0 30px #DAFF7C;
+    }
+}
+
+@media (min-width: 344px) {
+    .session_6_parceiros_foto {
+        width: 16rem;
+        height: 18rem;
+    }
+    .session6_img {
+        max-height: 12rem;
+    }
+}
+
+@media (min-width: 576px) {
+    .session_6_parceiros_div {
+        padding: 2rem;
+    }
+    .session_6_parceiros_fotos {
+        flex-wrap: wrap; /* Quebra de linha */
+        overflow-x: visible;
+        justify-content: center;
+    }
+    .session_6_parceiros_foto {
+        width: 14rem;
+        height: 16rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .session_6_parceiros_div {
+        padding: 2.5rem;
+        margin: 2rem auto;
+        max-width: 90%;
+    }
+    .session_6_parceiros_foto {
+        width: 16rem;
+        height: 18rem;
+    }
+    .session_6_parceiros_titulo {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .session_6_parceiros_div {
+        max-width: 1200px;
+    }
+    .session_6_parceiros_fotos {
+        gap: 2rem;
+    }
+    .session_6_parceiros_foto {
+        width: 18rem;
+        height: 20rem;
+    }
+    .session6_texto_imagens {
+        font-size: 1rem;
+    }
+}
+
+/* Efeitos comuns a todos os dispositivos */
+.session_6_parceiros_foto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px #DAFF7C;
+    transition: all 0.3s ease;
+}
+
+/* Esconde scrollbar mas mantém funcionalidade */
+.session_6_parceiros_fotos::-webkit-scrollbar {
+    height: 0.3rem;
+}
+.session_6_parceiros_fotos::-webkit-scrollbar-thumb {
+    background: #DAFF7C;
+    border-radius: 0.5rem;
+}
+
+/*Fim da section 6*/
+
+@font-face {
+    font-family: 'Gotham-Black';
+    src: url('/static/fonts/Gotham-Black.otf') format('opentype'); /* OTF usa 'opentype' */
+    font-weight: normal;
+    font-style: normal;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    height: 1150px;
+    text-align: center;
+    overflow: hidden;
+    font-family: 'Gotham-Black';
+    margin-top: 200px;
+}
+
+.footer_wave {
+    position: absolute;
+    top: -200px;
+    left: 0;
+    width: 200%;
+    z-index: 1;
+}
+
+.footer_wave img {
+    width: 100%;
+    height: auto;
+    margin-top: 200px;
+}
+
+.footer_content {
+    position: relative;
+    z-index: 2;
+    padding: 50px 0;
+}
+
+.footer_title {
+    position: relative;
+    color: black;
+    font-family: 'Gotham-Black';
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: -400px;
+    white-space: nowrap;
+    top: 0;
+    left: 200px;
+    top: 550px; /* Define uma posição fixa */
+    left: 35%;
+    transform: translate(50%, 50%, 50%);
+    margin-right: 1300px;
+    text-align: center;
+}
+
+
+.footer_contacts {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: -440px;
+    padding: 780px 0;
+}
+
+.footer_whatsapp_black, .footer_email {
+    width: 150px;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: -300px;
+}
+
+.footer_whatsapp_black:hover, .footer_email:hover {
+    transform: scale(1.1);
+}
+
+.footer_sections {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    max-width: 455px;
+    margin: 0 auto;
+}
+
+.footer_services ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer_services li {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.social_icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social_icons img {
+    width: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social_icons img:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 1233px) {
+    .footer_wave img {
+        display: none; /* Esconde a imagem da onda */
+    }
+
+    .footer_wave {
+        background-color: #DAFF7C; /* Define a cor de fundo */
+        width: 100%;
+        height: 200px; /* Ajuste conforme necessário */
+        position: relative;
+    }
+
+    .footer_contacts {
+        background-color: #DAFF7C;
+
+    }
+}
+
+@media (max-width: 768px) {
+    .footer_content {
+        max-width: 100%;
+        padding: 0 15px;
+        flex-wrap: wrap; /* Permite que os elementos quebrem de linha */
+    }
+
+    .footer_wave img {
+        display: none; /* Confirma que a imagem não aparece no mobile */
+    }
+
+    .footer_contacts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px; /* Deixa os ícones mais perto */
+        margin-bottom: -600px;
+
+    }
+
+    .footer_whatsapp_black,
+    .footer_email {
+        width: 120px;
+        margin-top: 40px; /* Ajusta o espaçamento */
+    }
+
+    .footer_sections {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    div.footer_sections{
+        align-items: center;
+    }
+    div.footer_title {
+        position: relative;
+        font-size: 30px;
+    }
+    .footer_services ul {
+        text-align: center;
+    }
+
+    .location_button {
+        width: 100%;
+        max-width: 180px;
+
+        gap: 5px;
+    }
+
+    .social_icons a {
+        z-index: 10;
+        display: inline-block;
+    }
+
+    .social_icons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .social_icons img {
+        width: 25px;
+    }
+
+    .footer_whatsapp_black,
+    .footer_email {
+        margin: 0;
+    }
+    .footer_title {
+        font-size: 20px; /* Tamanho ajustável */
+        text-align: center;
+        word-wrap: break-word; /* Quebra palavras grandes */
+        overflow-wrap: break-word; /* Garante a quebra correta */
+        margin-bottom: -450px;
+        padding: -300px;
+    }
+
+}
+
+
+
+  html {
+    scroll-padding-top: 40px; /* Ajuste o valor de acordo com a altura do seu cabeçalho */
+}
+  
+
+  .secdepoi_h1 {
+    font-size: 24px;
+    color: #DAFF7C;
+    font-family: 'Gotham Black';
+    margin-top: 50px;
+    text-align: center;
+}
+
+/*Inicio --> Modificado o nome da classe do botao section1_principal_botao_fale2 adicionando 'section_4_' no inicio na pasta /bip_site/templates/section_4.html */
+.section_4_section1_principal_botao_fale2 {
+    height: 70px;
+    color: black;
+    padding: 18px;
+    background-color: #DAFF7C;
+    border-radius: 20px;
+    font-size: 1.7rem;
+    width: 300px; /* Definir um tamanho fixo ajuda na centralização */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px auto; /* Centraliza horizontalmente */
+    text-decoration: none;
+    font-family: 'Gotham Black';
+}
+
+@media (max-width: 480px) {
+    .section_4_section1_principal_botao_fale2 {
+        font-size: 1.4rem; /* Reduz um pouco o tamanho da fonte */
+        height: 60px; /* Ajusta a altura */
+        padding: 15px; /* Ajusta o espaçamento interno */
+    }
+}
+
+.section_4_section1_principal_botao_fale2:hover{
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+/* Fim */
